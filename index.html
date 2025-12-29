@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe Game</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="light-theme">
+
+<div class="appWrapper">
+<main>
+<!--Start Screen-->
+    <div class="startScreen hide">
+        <p class="title">Tic Tac Toe</p>
+<div class="btnContainer">
+        <div class="btn">
+        <button class="playBtn">PLAY</button>
+        <button class="settingBtn">SETTING</button>
+        <button class="infoBtn">INFO</button>
+        </div>
+</div>
+    </div>
+
+    <!--Character screen-->
+    <div class="characterScreen selectionScreen">
+
+        <button class="charBackBtn">Back</button>
+
+        <h2 >Choose Your Player</h2>
+        <p class="chooseText">Player 1, choose your character</p>
+
+        <div class="player-grid">
+            <!--Player 1-->
+
+
+        <div class="player-card"
+             data-id="P1"
+             data-name="Pratikhya"
+             data-card="card/P1-Pratikhya-Card.png"
+             data-token="player/player_1.png">
+
+            <!-- This image is visible -->
+            <img src="card/P1-Pratikhya-Card.png" alt="">
+        </div>
+
+
+            <!--Player 2-->
+        <div class="player-card"
+                data-id="P2"
+                data-name="Bivab"
+                data-card="card/P2-Bivab-Card.png"
+                data-token="player/player_2.png">
+
+            <!-- This image is visible -->
+            <img src="card/P2-Bivab-Card.png" alt="">
+        </div>
+
+
+            <!--Player 3-->
+        <div class="player-card"
+                data-id="P3"
+                data-name="Swastik"
+                data-card="card/P3-Swastik-Card.png"
+                data-token="player/player_3.jpg">
+
+            <!-- This image is visible -->
+            <img src="card/P3-Swastik-Card.png" alt="">
+        </div>
+
+        </div>
+
+    </div>
+
+    <button class="startBtn hide">START</button>
+
+<!--  VS Animation   -->
+    <div class="vs-screen hide">
+        <div class="player-left"></div>
+        <h1 class="vs-text">VS</h1>
+        <div class="player-right"></div>
+    </div>
+
+    <div class="gameScreen hide">
+    <h1>Tic Tac Toe</h1>
+    <div class="container">
+    <div class="game">
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+    </div>
+    </div>
+        <div class="gameAction">
+    <button class="resetBtn">Reset Game</button>
+    <button class="endMatchBtn">End Match</button>
+        </div>
+    <div class="msg-container hide">
+        <p class="msg">Winner</p>
+    </div>
+    </div>
+    <div class="endPopup hide">
+        <div class="endBox">
+
+            <h2>End Match?</h2>
+            <p class="endBox-text">Are you sure you want to quit this match?</p>
+
+            <div class="endBtns">
+                <button class="cancelEnd">NO</button>
+                <button class="confirmEnd">YES</button>
+            </div>
+        </div>
+    </div>
+
+</main>
+</div>
+
+
+<!--SETTING SCREEN-->
+<div class="settingsScreen hide">
+
+    <div class="settingBox">
+        <button class="backBtn">Back</button>
+
+        <h3 class="setting-title">SETTINGS</h3>
+
+        <!--SETTING BOX-->
+        <div class="setting-box">
+            <div class="setting-label">
+                <i class="bi bi-volume-up-fill"></i>
+                <span>Sound</span>
+            </div>
+
+
+            <input type="range" id="volumeSlider" min="0" max="100" value="100">
+            <span id="volumeValue">100%</span>
+        </div>
+
+        <!--THEME-->
+        <div class="setting-box">
+            <div class="setting-label">
+                <span>Theme</span>
+            </div>
+
+            <div class="theme-buttons">
+                <button id="lightBtn" class="themeBtn light">
+                    <i class="bi bi-brightness-low-fill"></i>
+                    Light
+                </button>
+
+                <button id="darkBtn" class="themeBtn dark">
+                    <i class="bi bi-moon-fill"></i>
+                    Dark
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- INFO SCREEN -->
+<div class="infoScreen hide">
+
+    <div class="infoBox">
+
+        <button class="infoBackBtn">Back</button>
+
+        <h3 class="info-title">ABOUT DEVELOPER</h3>
+
+        <div class="infoContent">
+            <p>
+                Hi! I'm <b>Suchit Mahi</b>👋<br><br>
+                I am the developer of this Tic Tac Toe game.
+                I built this project using <b>HTML</b>, <b>CSS</b>, and <b>JavaScript</b>,
+                focusing not only on functionality but also on creating a
+                clean and user-friendly experience. Along with development,
+                I applied my <b>UX/UI</b> design skills to ensure the interface is
+                simple, intuitive, and visually balanced.
+                <br><br>
+                This project helped me strengthen my understanding of game logic,
+                <b>DOM manipulation</b>, and responsive design, while also improving
+                how I design layouts that feel natural for users to interact with.
+                I enjoy blending logic with design making projects that work well
+                and look good at the same time.
+                <br><br>
+                Thank you for playing ❤️
+                <br><br>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!--AUDIO-->
+<audio class="clickSound" src="audio/CR-CLICKSOUND.mp3"></audio>
+<audio class="winSound" src="audio/CR-WINSOUND.mp3"></audio>
+<audio class="drawSound" src="audio/CR-DRAW.mp3"></audio>
+<audio class="matchMusic" src="audio/COC-MATCHMUSIC.mp3"></audio>
+<audio class="menuSound" src="audio/CR-MENUSOUND.mp3" loop></audio>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</body>
+</html>
