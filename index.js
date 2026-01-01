@@ -678,7 +678,7 @@ const checkWinner = () => {
         allowEndPopup = true;
 
         disabledBoxes();
-    };
+    }
 };
 
 resetBtn.addEventListener("click" , resetGame);
