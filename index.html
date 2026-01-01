@@ -8,7 +8,11 @@
 
     <link rel="stylesheet" href="index.css">
 </head>
-<body class="light-theme">
+<body class="light-theme" class="dark-theme">
+
+<video id="bgVideo" class="bg-video" autoplay muted loop playsinline>
+    <source id="bgSource" src="backgroundBG/Minecraft_Village_Animation_Generation.mp4" type="video/mp4">
+</video>
 
 <div class="appWrapper">
 <main>
@@ -18,7 +22,7 @@
 <div class="btnContainer">
         <div class="btn">
         <button class="playBtn">PLAY</button>
-        <button class="settingBtn">SETTING</button>
+        <button class="settingBtn" id="settingBTN">SETTING</button>
         <button class="infoBtn">INFO</button>
         </div>
 </div>
@@ -79,7 +83,6 @@
 <!--  VS Animation   -->
     <div class="vs-screen hide">
         <div class="player-left"></div>
-        <h1 class="vs-text">VS</h1>
         <div class="player-right"></div>
     </div>
 
@@ -210,7 +213,7 @@
 <audio class="menuSound" src="audio/CR-MENUSOUND.mp3" loop></audio>
 
 
-
+<div class="theme-transition"></div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <script src="index.js"></script>
 </body>
