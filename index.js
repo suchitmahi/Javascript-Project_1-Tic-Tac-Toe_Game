@@ -239,6 +239,72 @@ function updateThemeButtons(){
 updateThemeButtons();
 
 
+const bgVideo = document.getElementById("bgVideo");
+const bgSource = document.getElementById("bgSource");
+
+function updateBackgroundVideo(){
+    if(document.body.classList.contains("dark-theme")){
+        bgSource.src = "backgroundBG/Minecraft_Village_Night_Animation.mp4";
+    } else {
+        bgSource.src = "backgroundBG/Minecraft_Village_Animation_Generation.mp4";
+    }
+    bgVideo.load();
+    bgVideo.play();
+}
+updateBackgroundVideo();
+
+
+// Light Button
+lightBtn.addEventListener("click" , () => {
+    animateThemeChange(() => {
+        document.body.classList.remove("dark-theme");
+        document.body.classList.add("light-theme");
+
+        localStorage.setItem("theme" , "light-theme");
+
+        updateThemeButtons();
+        updateBackgroundVideo();
+    });
+});
+
+// Dark Button
+darkBtn.addEventListener("click" , () => {
+    animateThemeChange(() => {
+        document.body.classList.remove("light-theme");
+        document.body.classList.add("dark-theme");
+
+        localStorage.setItem("theme" , "dark-theme");
+
+        updateThemeButtons();
+        updateBackgroundVideo();
+    });
+});
+
+const transitionOverlay = document.querySelector(".theme-transition");
+
+function animateThemeChange(callback){
+    transitionOverlay.classList.add("show");
+
+    setTimeout(() => {
+        callback();
+        transitionOverlay.classList.remove("show");
+    }, 500);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //BACK TO START
 backBtn.addEventListener("click", () =>{
@@ -601,10 +667,18 @@ const checkWinner = () => {
         drawSound.currentTime = 0;
         drawSound.play();
 
+        msgContainer.classList.remove("hide");
         msgContainer.style.display = "block";
         msgContainer.classList.add("show");
-        resetBtn.style.display = "none";
-    }
+
+        resetBtn.style.display = "inline-block";
+        resetBtn.textContent = "New Game";
+
+        endMatchBtn.textContent = "Exit";
+        allowEndPopup = true;
+
+        disabledBoxes();
+    };
 };
 
 resetBtn.addEventListener("click" , resetGame);
