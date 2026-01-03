@@ -1,6 +1,7 @@
-# ❌⭕ Tic Tac Toe Game (Advanced UI Version)
+# Tic Tac Toe Game with Character (Advanced UI Version)
 
-A modern, feature-rich **Tic Tac Toe game** built using **HTML, CSS, and JavaScript**, focusing on smooth UX, immersive visuals, sound effects, theme switching, and interactive animations.
+A modern, feature-rich **Tic Tac Toe game** built using **HTML, CSS, and JavaScript**, where players compete using **custom character tokens instead of traditional ❌ and ⭕ symbols**.  
+This project focuses on delivering a smooth, immersive, and visually polished user experience with animations, sound effects, themes, and interactive UI flows.
 
 This project goes beyond a basic Tic Tac Toe game by introducing **character selection, light/dark themes, background videos, sound controls, and polished UI transitions**.
 
@@ -10,46 +11,53 @@ This project goes beyond a basic Tic Tac Toe game by introducing **character sel
 
 ### 🎮 Gameplay
 - 2-player local Tic Tac Toe
-- Win & draw detection
-- Animated winning & draw messages
-- Reset game & exit match functionality
+- Character-based tokens instead of ❌ / ⭕
+- Accurate win and draw detection
+- Animated winner and draw messages
+- Reset game and exit match options
 
 ### 🧍 Character Selection
-- Player 1 & Player 2 character selection
-- Player cards with hover & selection animations
-- VS screen animation before match starts
-
+- Player 1 and Player 2 character selection
+- Interactive character cards with hover and selection effects
+- VS animation screen before match start
+- Character tokens displayed dynamically on the board
+  
 ### 🎨 UI / UX
-- Light & Dark theme support
+- Light and Dark theme support
 - Smooth theme transition animation
-- Dynamic background video (day/night)
-- Responsive layout & modern design
-- Hover effects and click animations
+- Dynamic background video (day/night based on theme)
+- Modern glassmorphism UI elements
+- Responsive layout and clean visual hierarchy
 
 ### 🔊 Audio System
-- Click sound effects
-- Win & draw sounds
+- Button click sounds
+- Win and draw sound effects
 - Background menu music
 - Match background music
-- Volume control with slider
-- Saved volume settings using `localStorage`
+- Volume control slider
+- Persistent volume settings using `localStorage`
 
 ### ⚙️ Settings & Info
-- Settings panel with:
+- Settings screen with:
   - Volume control
   - Theme switching
-- Info panel describing the developer
-- Smooth popups with background blur
-
+- Info screen with developer details
+- Blurred background popups for better focus
+  
 ---
 
 ## 🛠️ Technologies Used
 
-- **HTML5** – Structure
+- **HTML5** – Structure and layout
 - **CSS3** – Styling, animations, themes
 - **JavaScript (ES6)** – Game logic & interactivity
 - **Bootstrap Icons** – Icons
 - **LocalStorage** – Theme & volume persistence
+
+---
+
+## 📂 Project Structure
+
 
 ---
 
@@ -59,50 +67,52 @@ This project goes beyond a basic Tic Tac Toe game by introducing **character sel
 2. Click **PLAY**
 3. Select **two characters**
 4. Click **START**
-5. Players take turns placing their tokens
-6. First to align 3 tokens wins
+5. Players take turns placing their character tokens
+6. First player to align three matching tokens wins
 7. Use **Reset Game** or **End Match** anytime
 
 ---
 
 ## 🧠 Game Rules
 
-- Players take turns placing tokens on a 3×3 grid
-- A player wins if they align:
+- Each player selects a unique character before the match
+- Players take turns placing their character tokens on a 3×3 grid
+- A player wins by aligning three identical tokens:
   - Horizontally
   - Vertically
   - Diagonally
-- If all boxes fill without a winner → Draw
+- If all grid cells are filled and no player wins, the match ends in a draw
 
 ---
 
 ## 💾 Saved Preferences
 
-- 🎨 Theme (Light / Dark)
+The game automatically saves:
+- 🎨 Selected theme (Light / Dark)
 - 🔊 Volume level
 
-Both are stored using **localStorage**, so your settings persist across reloads.
+These preferences persist using **localStorage**, even after refreshing the page.
 
 ---
 
 ## 📌 Learning Outcomes
 
 - Advanced DOM manipulation
-- Game logic & state management
-- CSS animations & transitions
-- Audio handling in JavaScript
-- UX/UI design principles
-- Theme & settings persistence
-- Clean project structuring
+- Game state management
+- JavaScript event handling
+- CSS animations and transitions
+- Audio control using JavaScript
+- Theme switching with persistence
+- UI/UX design implementation
 
 ---
 
 ## 🚀 Future Improvements
 
-- Add AI / single-player mode 🤖  
-- Online multiplayer 🌐  
-- Score tracking system 📊  
-- Mobile-first optimizations 📱  
+- Single-player mode with AI 🤖
+- Online multiplayer 🌐
+- Match history and score tracking 📊
+- Mobile-first optimization 📱
 
 ---
 
@@ -116,5 +126,3 @@ Frontend Developer | UI/UX Enthusiast
 ---
 
 ⭐ If you like this project, don’t forget to **star the repository**!
-
-## 📂 Project Structure
