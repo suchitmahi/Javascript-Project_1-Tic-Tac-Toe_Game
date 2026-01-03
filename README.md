@@ -53,9 +53,6 @@ This project goes beyond a basic Tic Tac Toe game by introducing **character sel
 
 ---
 
-
----
-
 ## 🎮 How to Play
 
 1. Open `index.html` in a browser  
@@ -121,4 +118,3 @@ Frontend Developer | UI/UX Enthusiast
 ⭐ If you like this project, don’t forget to **star the repository**!
 
 ## 📂 Project Structure
-
