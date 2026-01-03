@@ -1,4 +1,4 @@
-# Tic Tac Toe Game with Character (Advanced UI Version)
+# Tic Tac Toe Game with Characters (Advanced UI Version)
 
 A modern, feature-rich **Tic Tac Toe game** built using **HTML, CSS, and JavaScript**, where players compete using **custom character tokens instead of traditional ❌ and ⭕ symbols**.  
 This project focuses on delivering a smooth, immersive, and visually polished user experience with animations, sound effects, themes, and interactive UI flows.
